@@ -67,13 +67,13 @@
   
      
 ?>
-  <center>
+  
   <div class="ablock ">
     <h1> BOOK SEARCH RESULTS </h1>
     
 
     
-    <table border="1" >
+    <table>
       <tr>
         
     <?php
@@ -109,15 +109,15 @@
         <button  id=<?php echo $ButtonId; ?>>Request Donor</button>
         <script>
           var rowId = <?php echo $rowId ?>;
-
-          function innerFunc(index) {
+          innerFunc();
+          
+        function innerFunc() {
             let btnIndex = "Btn" + rowId;
             console.log(btnIndex);
             document.getElementById(btnIndex).addEventListener("click", function() {
               window.location.href = "https://asecondlife.me/wp-content/plugins/custom/contactDoner.php?id=" + encodeURIComponent(<?php echo $id ?>);
             }, false);
           }
-          innerFunc(<?php $rowId ?>);
         </script>
       </td>
         <!-- Id-->
@@ -130,7 +130,7 @@
       <td><label>Comments:</label><br><?php echo $row['comments']; ?></td>
       
     </tr>
-    </center>
+    
   <?php
 
   }/*while*/

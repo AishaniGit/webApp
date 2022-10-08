@@ -107,7 +107,7 @@ if (isset($_POST['button_pressed'])) {
     $mail->Port = 465; // or 587
     $mail->IsHTML();
     $mail->Username = "asecondlife012@gmail.com";
-    $mail->Password = "Covid2021!";
+    $mail->Password = "ougnryqnhjznszpe";
     $mail->SetFrom("asecondlife012@gmail.com");
     $mail->Subject = "Book Request";
     $mail->Body = nl2br($body);

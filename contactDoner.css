@@ -1,97 +1,101 @@
+.ablock table  {
+  padding:5px;
+}
 fieldset{
-    background-color:rgb(188, 201, 198);
-    border: none;
-    border-radius: 2px;
-    margin-bottom: 12px;
-    overflow: hidden;
-    padding: 1px;
-    width: calc(100% - 130px); 
-  }
+  background-color:rgb(188, 201, 198);
+  border: none;
+  border-radius: 2px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  padding: 1px;
+  width: calc(100% - 130px); 
+}
 label{
-    cursor: pointer;
-    display: inline-block;
-    padding: 3px 6px;
-    text-align: right;
-    width: 150px;
-    vertical-align:middle;
-    font-weight: bold;
-    color: #1d062c;
-    font-size: larger;
-   
-   
-  }
+  cursor: pointer;
+  display: inline-block;
+  padding: 3px 6px;
+  text-align: right;
+  width: 150px;
+  vertical-align:middle;
+  font-weight: bold;
+  color: #1d062c;
+  font-size: larger;
+ 
+ 
+}
 table {
-  background: rgb(231, 243, 236);
-  box-shadow:0 0 0 10px rgb(188, 201, 192);
-  table-layout: fixed;
-  margin: 10px;
-  width: calc(100% - 145px); 
-  border-collapse: collapse;
+background: rgb(231, 243, 236);
+box-shadow:0 0 0 10px rgb(188, 201, 192);
+table-layout: fixed;
+margin: 10px;
+width: calc(100% - 145px); 
+border-collapse: collapse;
 }
 
-  th {
-  background-color: rgb(229, 241, 233);
-  color: rgb(22, 21, 21);
-  text-size-adjust:inherit ;
-  font-family: "Trebuchet MS", Arial, Verdana;
-  font-size: 40px;
-  padding: 1px;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  text-shadow: 2px 2px 5px rgb(116, 126, 119);
-  
-  }
-  td{
-    background-color: rgb(246, 248, 247);
-   
-    font-weight:normal;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  th, td {
-    padding: 1px;
-    text-align: left;
-    text-align: center;
-    border-bottom: 1px solid rgb(14, 13, 13);
-    font-size: 20px;
-    line-height: 20px;
-    word-wrap: break-word;
-    width: calc(100% - 100px); 
-  }
-  h1 {
-    text-shadow: 2px 2px 5px  rgb(116, 126, 119);
-  }
+th {
+background-color: rgb(229, 241, 233);
+color: rgb(22, 21, 21);
+text-size-adjust:inherit ;
+font-family: Arial;
+font-size: 40px;
+padding: 1px;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+text-shadow: 2px 2px 5px rgb(116, 126, 119);
+
+}
+td{
+  background-color: rgb(246, 248, 247);
+ 
+  font-weight:normal;
+  font-family: Arial;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+  text-align: center;
+  font-size: 20px;
+  line-height: 20px;
+  word-wrap: break-word;
+  width: calc(100% - 100px); 
+  border: thin inset grey;
+  margin: 1;
+}
+h1 {
+  text-shadow: 2px 2px 5px  rgb(116, 126, 119);
+}
 
 body{
-  background-color: rgb(203, 218, 208);
+background-color: rgb(203, 218, 208);
 }
 
 .button {
-  background-color: #6b756b;
-  border: none;
-  color: white;
-  padding: 10px 12px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 15px;
+background-color: #6b756b;
+border: none;
+color: white;
+padding: 10px 12px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 15px;
 }
 
 a:link {
-  background-color: rgb(95, 105, 248);
-  color: white;
-  padding: 14px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+background-color: rgb(95, 105, 248);
+color: white;
+padding: 14px 25px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
 }
 a:visited {
-  background-color: rgb(13, 4, 114);
-  color: white;
+background-color: rgb(13, 4, 114);
+color: white;
 }
 
 a:hover, a:active {
-  background-color: rgb(210, 206, 252);
-  color: white;
+background-color: rgb(210, 206, 252);
+color: white;
 }
 input[type=submit], input[type=reset] {
 height:40px;
@@ -108,27 +112,27 @@ justify-self: center;
 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 textarea{
-    width: 50%;
-    height: 150px ;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-  }
-  .textLabel{
-    cursor: pointer;
-    display: inline-block;
-    padding: 3px 6px;
-    text-align: right;
-    width: 150px;
-    vertical-align:top;
-    font-weight: bold;
-    color: #1d062c;
-    font-size: larger;
-  }
-  
+  width: 50%;
+  height: 150px ;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.textLabel{
+  cursor: pointer;
+  display: inline-block;
+  padding: 3px 6px;
+  text-align: right;
+  width: 150px;
+  vertical-align:top;
+  font-weight: bold;
+  color: #1d062c;
+  font-size: larger;
+}
+
 input[type=text] {
-    width: 50%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-  }
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
