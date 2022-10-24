@@ -13,7 +13,7 @@ function insertStationeryData()
     if (isset($_POST['submit'])) {
         //$_POST: Specific to input type only; gets info from input without displaying in URL
         //echo 'submitted';
-        $inserReselts = "";
+        $insertResults = "";
         $donorname = $_POST['donorname'];
         $stationeryType = $_POST['stationeryType'];
         $comments = (strlen($_POST['comments']) > 300) ? substr($_POST['comments'], 0, 297) . '...' : $_POST['comments'];
@@ -27,17 +27,17 @@ function insertStationeryData()
 
             global $wpdb;
 
-            $sql = $wpdb->insert("stationeryTypes", array("donorName" => $donorname, "bookCategory" => $category, "grade" => $grade, "bookName" => $bookname, "publishYear" => $publishYr, "comments" => $comments, "email" => $email, "phone" => $phone));
-            // echo $wpdb->show_errors();
+            $sql = $wpdb->insert("stationeryInfo", array("donorName" => $donorname, "stationeryType" => $stationeryType,  "comments" => $comments, "email" => $email, "phone" => $phone));
+            //echo $wpdb->show_errors();
             //echo $wpdb->print_error();
-            // echo $wpdb->last_errors();
+            //echo $wpdb->last_errors();
             if ($sql == true) {
-                $inserReselts = 'Details Updated';
+                $insertResults = 'Details Updated';
             } else {
-                $inserReselts = 'Details could not be Updated , please contact Admin';
+                $insertResults = 'Details could not be Updated , please contact Admin';
             }
 
-            echo "<h3><center>" . $inserReselts . "<center></h3>";
+            echo "<h3><center>" . $insertResults . "<center></h3>";
         } //validate email
         else {
             echo ($email . " is not a valid email address");
@@ -46,7 +46,7 @@ function insertStationeryData()
 ?>
     <style>
         <meta name="viewport"content="width=device-width, initial-scale=1.0>
-<?php include "insertData.css" ?>
+<?php include "CSS/insertBooks.css" ?>
     </style>
 
     <?php
@@ -67,9 +67,9 @@ function insertStationeryData()
                     <input type="text" placeholder="Donor Name (Optional)" name="donorname" id="donorname" align="left" />
                 </p>
                 <p>
-                    <label for="stationeryType">Stationery Type</label>
+                    <label for="stationeryType">Stationery</label>
                     <select name="stationeryType" id="stationeryType" required>
-                        <option value=""> Select Stationery Type </option>
+                        <option value=""> Select Stationery</option>
                         <?php
 
                         $stationeryList = $wpdb->get_results("SELECT stationeryType FROM stationeryTypes");
@@ -80,8 +80,6 @@ function insertStationeryData()
                         ?>
                     </select>
                 </p>
-
-
                 <p>
                     <label for="Email">Email</label>
                     <input type="text" placeholder="Enter Email ID" name="email" id="email" align="left" required />

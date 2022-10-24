@@ -1,12 +1,12 @@
 <?php
 /*
-plugin name: Insert Data
+plugin name: Insert Books
 */
 
 $path = preg_replace('/wp-content.*$/', '', __DIR__);
 require_once($path . '/wp-load.php');
 
-function insertData()
+function insertBooks()
 {
     
 
@@ -50,7 +50,7 @@ function insertData()
 ?>
     <style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0>
-        <?php include "insertData.css" ?>
+        <?php include "CSS/insertBooks.css" ?>
     </style>
     
     <?php
@@ -125,5 +125,5 @@ function insertData()
     </div>
 <?php
 }
-add_shortcode('insertData', 'insertData');
+add_shortcode('insertBooks', 'insertBooks');
 ?>

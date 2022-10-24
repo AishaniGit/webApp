@@ -14,21 +14,21 @@ function stationeryInputInformation()
 <!--Enter Search Criteria-->
 <style>
     <meta name="viewport"content="width=device-width, initial-scale=1.0>
-<?php include "displayData.css"?>
+<?php include "CSS/searchBooks.css"?>
 </style>
 <!-- <h1> Enter Book Search Info</h1> -->
 <br/>
 <br/>
 <center>
   <div class="container">
-            <form action="https://asecondlife.me/wp-content/plugins/custom/bookSearchResult.php" method="get">
+            <form action="https://asecondlife.me/wp-content/plugins/custom/stationerySearchResult.php" method="get">
                 <div>
                 <!-- <fieldset> -->
                    
                     <p>
 
-                        <label for="stationeryCategory">Stationery Category:</label>
-                        <select  name="stationeryCategory" id="category" required>
+                        <label for="stationeryType">Stationery Category:</label>
+                        <select  name="stationeryType" id="category" required>
                             <option value="">Select Stationery Category </option>
                             <?php
                                 $result = $wpdb->get_results("SELECT stationeryType FROM stationeryTypes");

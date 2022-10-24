@@ -1,12 +1,12 @@
 <?php
 /*
-plugin name: Display Data
+plugin name: Search Books
 */
 
 $path = preg_replace('/wp-content.*$/', '', __DIR__);
 require_once($path . '/wp-load.php');
 
-function displayData()
+function searchBooks()
 {
  global $wpdb;  
 ?>
@@ -14,7 +14,7 @@ function displayData()
 <!--Enter Search Criteria-->
 <style>
     <meta name="viewport"content="width=device-width, initial-scale=1.0>
-<?php include "displayData.css"?>
+<?php include "CSS/searchBooks.css"?>
 </style>
 <!-- <h1> Enter Book Search Info</h1> -->
 <br/>
@@ -66,5 +66,5 @@ function displayData()
 
 <?php
 }/*function*/
-add_shortcode('displayData', 'displayData');
+add_shortcode('searchBooks', 'searchBooks');
 ?>

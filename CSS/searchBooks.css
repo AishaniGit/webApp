@@ -16,6 +16,7 @@ label{
   vertical-align:top;
   font-weight: bold;
   color: #1d062c;
+  font-family: "Trebuchet MS", Arial, Verdana;
  
 }
 
@@ -28,12 +29,14 @@ input[type=text] {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+  font-family: "Trebuchet MS", Arial, Verdana;
 }
 
 select
 {
     width:  50%;
     height: 42px;
+    
 }
 body{
   background-color:rgb(203, 218, 212);
@@ -47,6 +50,7 @@ body{
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-family: "Trebuchet MS", Arial, Verdana;
 }
 .container {
   width:100%;
@@ -54,4 +58,19 @@ body{
   background-color:rgb(203, 218, 212);
   padding: 20px;
   
+}
+input[type=submit]{
+height:40px;
+padding: 10 px 0;
+margin: 1 px;
+border: 1 px solid transparent;
+background: rgb(135, 48, 69);
+color: white;
+border-radius: 5px;
+width: 15%;
+cursor: pointer;
+transition: all 1s;
+justify-self: center;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+font-family: "Trebuchet MS", Arial, Verdana;
 }

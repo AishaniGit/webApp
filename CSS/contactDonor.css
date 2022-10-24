@@ -1,6 +1,7 @@
 .ablock table  {
   padding:5px;
 }
+}
 fieldset{
   background-color:rgb(188, 201, 198);
   border: none;
@@ -18,8 +19,9 @@ label{
   width: 150px;
   vertical-align:middle;
   font-weight: bold;
-  color: #1d062c;
+  color: rgb(135, 48, 69);
   font-size: larger;
+  font-family: "Trebuchet MS", Arial, Verdana;
  
  
 }
@@ -36,41 +38,46 @@ th {
 background-color: rgb(229, 241, 233);
 color: rgb(22, 21, 21);
 text-size-adjust:inherit ;
-font-family: Arial;
+font-family: "Trebuchet MS", Arial, Verdana;
 font-size: 40px;
 padding: 1px;
 border-bottom-width: 1px;
 border-bottom-style: solid;
-text-shadow: 2px 2px 5px rgb(116, 126, 119);
-
 }
 td{
   background-color: rgb(246, 248, 247);
- 
   font-weight:normal;
-  font-family: Arial;
-}
+   }
 th, td {
   padding: 5px;
-  text-align: left;
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 20px;
   word-wrap: break-word;
   width: calc(100% - 100px); 
   border: thin inset grey;
   margin: 1;
+  font-family: "Trebuchet MS", Arial, Verdana;
 }
 h1 {
-  text-shadow: 2px 2px 5px  rgb(116, 126, 119);
+  font-family: "Trebuchet MS", Arial, Verdana;
 }
-
+h2 {
+  font-family: "Trebuchet MS", Arial, Verdana;
+  color: rgb(135, 48, 69);
+}
+h3{
+  font-family: "Trebuchet MS", Arial, Verdana;
+  color: rgb(135, 48, 69);
+  font-size: 20px;
+}
 body{
 background-color: rgb(203, 218, 208);
+font-family: "Trebuchet MS", Arial, Verdana;
 }
 
-.button {
-background-color: #6b756b;
+#btn{
+background: #6b756b;
 border: none;
 color: white;
 padding: 10px 12px;
@@ -78,6 +85,7 @@ text-align: center;
 text-decoration: none;
 display: inline-block;
 font-size: 15px;
+font-family: "Trebuchet MS", Arial, Verdana;
 }
 
 a:link {
@@ -87,22 +95,25 @@ padding: 14px 25px;
 text-align: center;
 text-decoration: none;
 display: inline-block;
+font-family: "Trebuchet MS", Arial, Verdana;
 }
 a:visited {
 background-color: rgb(13, 4, 114);
 color: white;
+font-family: "Trebuchet MS", Arial, Verdana;
 }
 
 a:hover, a:active {
 background-color: rgb(210, 206, 252);
 color: white;
+font-family: "Trebuchet MS", Arial, Verdana;
 }
 input[type=submit], input[type=reset] {
 height:40px;
 padding: 10 px 0;
 margin: 1 px;
 border: 1 px solid transparent;
-background: #6b756b;
+background: rgb(135, 48, 69);
 color: white;
 border-radius: 5px;
 width: 15%;
@@ -110,6 +121,7 @@ cursor: pointer;
 transition: all 1s;
 justify-self: center;
 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+font-family: "Trebuchet MS", Arial, Verdana;
 }
 textarea{
   width: 50%;
@@ -117,6 +129,7 @@ textarea{
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+  font-family: "Trebuchet MS", Arial, Verdana;
 }
 .textLabel{
   cursor: pointer;
@@ -126,8 +139,9 @@ textarea{
   width: 150px;
   vertical-align:top;
   font-weight: bold;
-  color: #1d062c;
+  color: rgb(135, 48, 69);
   font-size: larger;
+  font-family: "Trebuchet MS", Arial, Verdana;
 }
 
 input[type=text] {
@@ -135,4 +149,5 @@ input[type=text] {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+  font-family: "Trebuchet MS", Arial, Verdana;
 }

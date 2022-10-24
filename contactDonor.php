@@ -14,7 +14,7 @@ $id = $_GET['id'];
   <meta charset="UTF-8">
   <title>Book Search Result</title>
   <style>
-    <?php include "contactDoner.css" ?>
+    <?php include "CSS/contactDonor.css" ?>
   </style>
 </head>
 
@@ -72,9 +72,9 @@ $id = $_GET['id'];
     </p>
     <p>
       <label class="textLabel" for="comments">Comments or Questions to the Donor:</label>
-      <textarea id="comment" placeholder="Enter any comments besides the above book info in 300 chars" name="comments" cols="20" rows="2"></textarea>
+      <textarea id="comment" name="comments" placeholder="Enter any comments besides the above book info in 300 chars" name="comments" cols="20" rows="2"></textarea>
     </p>
-    <input class="button" type="submit" value="Send Request to Donor" />
+    <input id="btn" class="button" type="submit" value="Send Request to Donor" />
     <input type="hidden" name="button_pressed" value="1" />
   </fieldset>
 
