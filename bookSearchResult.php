@@ -1,3 +1,7 @@
+<!-- This page loads the results from the search page, 
+     displays buttons to contact donors,  
+     and does pagination of the results -->
+
 <head>
     <meta charset="UTF-8">
     <title>Stationery Search Results</title>
@@ -9,31 +13,27 @@
 
 <body>
     <?php
-    //load the wordpress file which has the db info
+    //load the wordpress file which connection Info
     $path = preg_replace('/wp-content.*$/', '', __DIR__);
     require_once($path . '/wp-load.php');
     //the global wordpress db variable 
     global $wpdb;
     $category = $_GET['category'];
     $grade = $_GET['grade'];
-
-
-    //$rowIdArry = array();
     $rowId = 0;
     $results_per_page = 2;
+
     $sql = "select COUNT(*) as num_rows from bookInfo where bookcategory='$category' and grade=$grade ";
     //echo $sql;
     $rows = $wpdb->get_results($sql);
     $number_of_results = $rows[0]->num_rows;
     // determine number of total pages available
     $number_of_pages = ceil($number_of_results / $results_per_page);
-    //echo 'page'.$_GET['page'];
     if (!isset($_GET['page'])) {
         $page = 1;
     } else {
         $page = $_GET['page'];
     }
-
     // determine the sql LIMIT starting number for the results on the displaying page
     $this_page_first_result = ($page - 1) * $results_per_page;
 
@@ -71,6 +71,7 @@
                                 console.log(btnIndex);
                                 document.getElementById(btnIndex).addEventListener("click", innerFunc);
                             }
+
                             function innerFunc() {
                                 window.location.href = "https://asecondlife.me/wp-content/plugins/custom/contactDonor.php?id=" + encodeURIComponent(<?php echo $id ?>);
                             }
