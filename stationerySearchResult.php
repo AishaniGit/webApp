@@ -1,3 +1,7 @@
+<<!-- This page loads the matching stationery
+      from the database using parameters sent from the search page,
+      displays buttons to contact donors,
+      and implements pagination for the results -->
 <head>
     <meta charset="UTF-8">
     <title>Stationery Search Results</title>
@@ -37,7 +41,7 @@
     // determine the sql LIMIT starting number for the results on the displaying page
     $this_page_first_result = ($page - 1) * $results_per_page;
 
-    //retrieve selected results from database and display them on page
+    //retrieve selected results from database and display them on the page
     $sql = "SELECT * FROM stationeryInfo where stationeryType='$category' LIMIT $this_page_first_result,$results_per_page";
     $result = $wpdb->get_results($sql);
     ?>
@@ -88,9 +92,8 @@
                 </tr>
                 
             <?php
-            }/*for*/
-            
-            
+            }/*for*/          
+          
             ?>
         </table>
     </div>

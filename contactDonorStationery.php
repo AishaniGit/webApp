@@ -1,7 +1,7 @@
-<!-- This page confirms the Book details,
+<!-- This page confirms the stationery details,
      validates the requestor's email 
-     and has a submit button to email donor 
-     to request the book -->
+     and has a submit button to the email donor 
+     to request the stationery-->
 <?php
 require('PHPMailer/PHPMailerAutoload.php');
 $path = preg_replace('/wp-content.*$/', '', __DIR__);

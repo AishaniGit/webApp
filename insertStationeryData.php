@@ -1,6 +1,7 @@
 <?php
 /*
 plugin name: Insert Stationery Data
+This plugin inserts the donated stationery info to the db.
 */
 
 $path = preg_replace('/wp-content.*$/', '', __DIR__);
@@ -11,20 +12,16 @@ function insertStationeryData()
 
 
     if (isset($_POST['submit'])) {
-        //$_POST: Specific to input type only; gets info from input without displaying in URL
         //echo 'submitted';
         $insertResults = "";
         $donorname = $_POST['donorname'];
         $stationeryType = $_POST['stationeryType'];
         $comments = (strlen($_POST['comments']) > 300) ? substr($_POST['comments'], 0, 297) . '...' : $_POST['comments'];
-        // ? is then     : is else     . is concat.
         $email = $_POST['email'];
         $phone = $_POST['phone'];
-        //echo $donorname;
-        //echo $bookname;
         // Validate email
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-
+            //the global wordpress db variable 
             global $wpdb;
 
             $sql = $wpdb->insert("stationeryInfo", array("donorName" => $donorname, "stationeryType" => $stationeryType,  "comments" => $comments, "email" => $email, "phone" => $phone));
@@ -45,13 +42,14 @@ function insertStationeryData()
     } //submit
 ?>
     <style>
-        <meta name="viewport"content="width=device-width, initial-scale=1.0>
-<?php include "CSS/insertBooks.css" ?>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0>
+ <?php include "CSS/insertBooks.css" ?>
     </style>
 
     <?php
     global $wpdb;
     ?>
+    /* Form to Inserted donated Staionery info */
     <div class="container">
         <form action="" method="post">
             <fieldset>

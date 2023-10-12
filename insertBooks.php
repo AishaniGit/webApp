@@ -1,10 +1,10 @@
 <?php
 /*
 plugin name: Insert Books
-This page inserts book details
-entered by the donor to the db 
+This page inserts book details entered by the donor into
+the database and utilizes the Google Geolocation API
+to retrieve the latitude and longitude based on the entered address.
 */
-
 $path = preg_replace('/wp-content.*$/', '', __DIR__);
 require_once($path . '/wp-load.php');
 require_once('geolocator.php');
@@ -45,8 +45,8 @@ function insertBooks()
     } //submit
 ?>
     <style>
-        <meta name="viewport"content="width=device-width, initial-scale=1.0>
-<?php include "CSS/insertBooks.css" ?>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0>
+ <?php include "CSS/insertBooks.css" ?>
     </style>
 
     <?php

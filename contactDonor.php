@@ -1,7 +1,5 @@
-<!-- This page confirms the Book details,
-     validates the requestor's email 
-     and has a submit button to email donor 
-     to request the book -->
+<!-- This page confirms the book details, validates the requester's email, 
+and includes a submit button for sending an email to the donor to request the book -->
 <?php
 require('PHPMailer/PHPMailerAutoload.php');
 $path = preg_replace('/wp-content.*$/', '', __DIR__);
@@ -47,7 +45,7 @@ $id = $_GET['id'];
             <h3>Book Name</h3><?php echo $bookName; ?>
           </td>
         </tr>
-        <!--Book Details With Donor name and other details-->
+        <!--Book Details With donor name and other details-->
         <tr>
           <td>
             <h3>Published Year</h3><?php echo  $publishYr; ?>
@@ -63,7 +61,7 @@ $id = $_GET['id'];
       }/*for*/
 ?>
 </table>
-<!---Form to enter requestor's details -->
+<!---Form to enter the requestor's details -->
 <form action="" method="post">
   <fieldset>
     <h2>Enter your Info and click submit to request</h2>
@@ -123,7 +121,7 @@ if (isset($_POST['button_pressed'])) {
 <form action="" method="post">
 </form>
 <!---Button to Home-->
-<form method="post" action="https://asecondlife.me/">
+<form method="post" action="https://asecondlife.online/">
   <center><input type="submit" name="submit" value="Home" align="right" /> </center>
 </form>
 </body>
